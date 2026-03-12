@@ -1,147 +1,295 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy birthday baby</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0b0e14;
-            --accent-pink: #ffb7c5;
-            --text-color: #fce4ec;
-        }
 
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-            font-family: 'Quicksand', sans-serif;
-            color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        /* Floating particles background */
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .star {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            opacity: 0.5;
-            animation: float 10s infinite ease-in-out;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) translateX(0); }
-            50% { transform: translateY(-100px) translateX(20px); }
-        }
-
-        .container {
-            position: relative;
-            z-index: 1;
-            max-width: 600px;
-            margin: 40px 20px;
-            padding: 50px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            border-radius: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        h1 {
-            font-family: 'Tiro kannada', serif;
-            font-size: 2.2rem;
-            color: #ffb7c5;
-            margin-bottom: 30px;
-            text-shadow: 0 0 15px rgba(255, 183, 197, 0.4);
-            animation: fadeIn 2s ease-in;
-        }
-
-        .message {
-            line-height: 2.2;
-            font-size: 1.25rem;
-            text-align: justify;
-            animation: fadeInUp 3s ease-out;
-        }
-
-        p {
-            margin-bottom: 20px;
-        }
-
-        .heart {
-            color: #ffb7c5;
-            font-size: 2rem;
-            margin-top: 20px;
-            display: inline-block;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="stars" id="starContainer"></div>
-
-    <div class="container">
-        <h1>ನನ್ನ ಮುದ್ದಿನ ಕಂದಮ್ಮಳಿಗೆ ಹುಟ್ಟು ಹಬ್ಬದ ಶುಭಾಷಯಗಳು🤍💫</h1>
-        
-        <div class="message">
-            <p>11 𝒹𝒶𝓎𝓈 𝒶𝒻𝓉𝑒𝓇 𝓂𝑒 𝓎𝑜𝓊'𝓇𝑒 18 😚,𝒾𝓉 𝒾𝓈 𝒿𝓊𝓈𝓉 𝒶 𝒷𝑒𝑔𝒾𝓃𝓃𝒾𝓃𝑔 𝑜𝒻 𝒶 𝑒𝓍𝓉𝓇𝒶𝑜𝓇𝒹𝒾𝓃𝒶𝓇𝓎 𝒿𝑜𝓊𝓇𝓃𝑒𝓎 𝑜𝒻 𝓎𝑜𝓊𝓇 𝑜𝑜𝓅𝓈 👀 𝒪𝒰𝑅 𝓁𝒾𝒻𝑒, 𝒾 𝓀𝓃𝑜𝓌 𝒾𝓉𝓈 𝒿𝓊𝓈𝓉 𝒶 𝓎𝑒𝒶𝓇 𝓌𝒾𝓉𝒽 𝒶𝒹𝒹𝑒𝒹 𝓇𝑒𝓈𝓅𝑜𝓃𝓈𝒾𝒷𝒾𝓁𝒾𝓉𝒾𝑒𝓈  𝓈𝒶𝓂𝑒 𝓉𝒾𝓂𝑒 𝓎𝑜𝓊 𝒸𝒶𝓃 𝒻𝒾𝓃𝒶𝓁𝓁𝓎 𝓂𝒶𝓀𝑒 𝒶𝓁𝓁 𝓉𝒽𝑒 𝓂𝒾𝓈𝓉𝒶𝓀𝑒𝓈 𝓎𝑜𝓊𝓇 𝓅𝒶𝓇𝑒𝓃𝓉𝓈 𝓌𝒶𝓇𝓃𝑒𝒹 𝓎𝑜𝓊 𝒶𝒷𝑜𝓊𝓉 🤭,𝒿𝓊𝓈𝓉 𝒶𝓃𝑜𝓉𝒽𝑒𝓇 𝓉𝓇𝒾𝓅 𝒶𝓇𝑜𝓊𝓃d 𝓉𝒽𝑒 𝓈𝓊𝓃.</p>
-
-            <p>𝐿𝑒𝓉 𝓉𝒽𝒾𝓈 𝓎𝑒𝒶𝓇 𝒷𝑒 𝓉𝒽𝑒 𝓈𝓉𝒶𝓇𝓉 𝑜𝒻 𝒶 𝓁𝒾𝒻𝑒𝓉𝒾𝓂𝑒 𝑜𝒻 𝒽𝒶𝓅𝓅𝒾𝓃𝑒𝓈𝓈, 𝓀𝓃𝑜𝓌𝒾𝓃𝑔 𝐼'𝓂 𝓎𝑜𝓊𝓇𝓈 𝒶𝓃d 𝓎𝑜𝓊 𝒶𝓇𝑒 𝑀𝒾𝓃𝑒💞🫂.𝐼 𝒽𝑜𝓅𝑒 𝓉𝒽𝒾𝓈 𝓎𝑒𝒶𝓇 𝒷𝑒 𝒶 𝓂𝒶𝓈𝓉𝑒𝓇𝓅𝒾𝑒𝒸𝑒 𝑜𝒻 𝓎𝑜𝓊𝓇 𝑜𝓌𝓃 𝓂𝒶𝓀𝒾𝓃𝑔, 𝒻𝒾𝓁𝓁𝑒d 𝓌𝒾𝓉𝒽 𝓁𝒶𝓊𝑔𝒽𝓉𝑒𝓇, 𝒷𝒾𝑔 𝒶𝒹𝓋𝑒𝓃𝓉𝓊𝓇𝑒𝓈, 𝒶𝓃d 𝓁𝑜𝓉𝓈 𝑜𝒻 𝓁𝑜𝓋𝑒💖.</p>
-
-            <p>𝐼'𝓂 𝒽𝑒𝓇𝑒 𝒻𝑜𝓇 𝓎𝑜𝓊𝓇 𝓈𝓊𝓅𝓅𝑜𝓇𝓉. 𝐼 𝓌𝒶𝓃𝓉 𝓎𝑜𝓊 𝓉𝑜 𝒷𝑒 𝒽𝒶𝓅𝓅𝓎 𝒶𝓁𝓌𝒶𝓎𝓈 , 𝓂𝓎 𝒹𝒶𝓎 𝒹𝑜𝑒𝓈𝓃'𝓉 𝓉𝓇𝓊𝓁𝓎 𝓈𝓉𝒶𝓇𝓉 𝓊𝓃𝓉𝒾𝓁 𝐼 𝓈𝑒𝑒 𝓎𝑜𝓊 𝓈𝓂𝒾𝓁𝑒. 𝒴𝑜𝓊 𝒶𝓁𝓌𝒶𝓎𝓈 𝑔𝓇𝑜𝓊𝓃𝒹𝑒d 𝓂𝑒🫠.</p>
-
-            <p>𝐼 𝓌𝒾𝓈𝒽 𝒻𝑜𝓇 𝓎𝑜𝓊𝓇 𝑔𝑜𝑜d 𝒽𝑒𝒶𝓁𝓉𝒽, 𝒶𝓃d 𝑜𝒻𝒸 𝓈𝓉𝓊𝒹𝓎 𝓌𝑒𝓁𝓁, d𝑜𝓃'𝓉 𝒻𝑒𝑒𝓁 𝓁𝑜𝓃𝑒𝓁𝓎 𝒾'𝓂 𝒶𝓁𝓌𝒶𝓎𝓈 𝒽𝑒𝓇𝑒 𝒻𝑜𝓇 𝓎𝑜𝓊 𝒶𝓃 d 𝑜𝓃𝒸𝑒 𝒶𝑔𝒶𝒾𝓃 𝒾 𝓌𝒾𝓈𝒽 𝓎𝑜𝓊 𝒶 𝓋𝑒𝓇𝓎 𝐻𝒜𝒫𝒫𝒴 𝐵𝐼𝑅𝒯𝐻𝒟𝒜𝒴 𝒜𝑀𝑀𝒰 💗...</p>
-        </div>
-
-        <div class="heart">❤</div>
-    </div>
-
-    <script>
-        // Create random floating stars
-        const container = document.getElementById('starContainer');
-        for (let i = 0; i < 50; i++) {
-            const star = document.createElement('div');
-            star.className = 'star';
-            const size = Math.random() * 5 + 2 + 'px';
-            star.style.width = size;
-            star.style.height = size;
-            star.style.left = Math.random() * 100 + '%';
-            star.style.top = Math.random() * 100 + '%';
-            star.style.animationDelay = Math.random() * 5 + 's';
-            container.appendChild(star);
+<html class="dark" lang="kn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Happy Birthday Ammu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Tiro+Kannada&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b5b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#12080a",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"],
+                        "kannada": ["Tiro Kannada", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
         }
     </script>
-</body>
-</html>
+<style>
+        .cosmic-bg {
+            background: radial-gradient(circle at 50% 50%, #221015 0%, #12080a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .nebula {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(238, 43, 91, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(147, 51, 234, 0.1) 0%, transparent 40%);
+            filter: blur(80px);
+        }
+        .stars {
+            background-image: 
+                radial-gradient(1px 1px at 20px 30px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 50% 50%, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 80% 10%, #fff, rgba(0,0,0,0));
+            background-size: 200px 200px;
+            opacity: 0.4;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255,255,255,0.1);
+        }
+        .neon-glow {
+            text-shadow: 0 0 10px rgba(238, 43, 91, 0.8), 0 0 20px rgba(238, 43, 91, 0.4);
+        }
+        .gold-accent {
+            background: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+<style>
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+    }
+    @keyframes shimmer-gold {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+    }
+    @keyframes star-drift {
+        0% { transform: scale(1) translate(0, 0); }
+        50% { transform: scale(1.1) translate(-10px, 10px); }
+        100% { transform: scale(1) translate(0, 0); }
+    }
+    @keyframes pulse-soft {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(238, 43, 91, 0.4)); }
+        50% { transform: scale(1.1); filter: drop-shadow(0 0 15px rgba(238, 43, 91, 0.8)); }
+    }
+    .animate-float {
+        animation: float 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    }
+    .animate-shimmer {
+        background: linear-gradient(90deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c, #bf953f);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shimmer-gold 4s linear infinite;
+    }
+    .animate-star-drift {
+        animation: star-drift 20s ease-in-out infinite;
+    }
+    .animate-pulse-emoji {
+        display: inline-block;
+        animation: pulse-soft 3s ease-in-out infinite;
+    }
+    .hover-glow-card {
+        transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    }
+    .hover-glow-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 30px rgba(238, 43, 91, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.1);
+        border-color: rgba(238, 43, 91, 0.5) !important;
+    }
+</style><style>
+    @keyframes gold-glare {
+        0% { filter: drop-shadow(0 0 2px rgba(255, 215, 0, 0.5)); transform: scale(1); }
+        50% { filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8)) brightness(1.3); transform: scale(1.1); }
+        100% { filter: drop-shadow(0 0 2px rgba(255, 215, 0, 0.5)); transform: scale(1); }
+    }
+    .realistic-gold-glow {
+        display: inline-block;
+        background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gold-glare 3s ease-in-out infinite;
+        position: relative;
+        overflow: hidden;
+    }
+    .realistic-gold-glow::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -150%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.8) 50%, transparent 70%);
+        transform: rotate(25deg);
+        animation: shimmer-swipe 4s infinite;
+        pointer-events: none;
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: initial;
+    }
+    @keyframes shimmer-swipe {
+        0% { left: -150%; }
+        20%, 100% { left: 150%; }
+    }
+</style></head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="cosmic-bg min-h-screen flex flex-col items-center justify-center p-4 sm:p-8">
+<div class="nebula"></div>
+<div class="stars absolute inset-0 animate-star-drift"></div>
+<header class="w-full max-w-4xl flex items-center justify-between mb-8 relative z-10 px-4 relative z-20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white text-xl" style="">cake</span>
+</div>
+<h2 class="text-lg font-bold tracking-tight" style="">Birthday Special</h2>
+</div>
+<div class="flex gap-3">
+<button class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary/20 transition-all duration-300" style="">
+<span class="material-symbols-outlined text-primary" style="">favorite</span>
+</button>
+<button class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary/20 transition-all duration-300" style="">
+<span class="material-symbols-outlined text-white" style="">share</span>
+</button>
+</div>
+</header>
+<main class="w-full max-w-3xl relative z-10 relative z-10">
+<div class="glass-card rounded-3xl overflow-hidden mb-8 animate-float">
+<div class="relative h-64 sm:h-96 w-full">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent z-10"></div>
+<img alt="Chocolate birthday cake with 'Happy Birthday Ammu' written in cream" class="w-full h-full object-cover" data-alt="A cozy, cinematic top-down view of a chocolate birthday cake for Ammu" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs8a_Mx3qx6xCSIw6Ijg8Ffh9at3huLtxsULCx1PChKJBlbcNELzBVFGmzwsSaSPvdaOieEmEtRQR9kR5jqliDsDzGsRmpAR6pfnSD3OB9jaYG_FRk9pb59RVPFOT3gv4Rl72erdqseMN23UP3YGp5A6tdecmlZU_tZJOvF1otb4dK_6sfI557ANJsJVJCTENbl4BymHG-2FU3Zcir6xut3DtTsi9t8s7a14XJT67k5EljEV3lhBEneiNpYn6dsmmmDEktazQGoA8" style=""/>
+<div class="absolute bottom-0 left-0 p-8 z-20 w-full text-center">
+<h1 class="font-kannada text-3xl sm:text-5xl lg:text-6xl text-white neon-glow leading-tight mb-2" style="">
+                            ನನ್ನ ಮುದ್ದಿನ ಕಂದಮ್ಮಳಿಗೆ ಹುಟ್ಟು ಹಬ್ಬದ ಶುಭಾಷಯಗಳು🤍💫
+                        </h1>
+</div>
+</div>
+<div class="p-8 sm:p-12 space-y-8">
+<div class="text-center space-y-4">
+<div class="inline-block px-4 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-2" style="">
+                            A New Chapter Begins
+                        </div>
+<p class="text-lg sm:text-xl leading-relaxed font-light text-slate-300" style="">
+                            11 days after me you're 18 😚, it is just a beginning of a extraordinary journey of our oops 👀 <span class="text-primary font-bold" style="">OUR</span> life. 
+                            I know it's just a year with added responsibilities, but now you can finally make all the mistakes your parents warned you about 🤭, just another trip around the sun.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+<div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/30 transition-colors hover-glow-card">
+<span class="material-symbols-outlined text-primary mb-3" style="">auto_awesome</span>
+<h3 class="text-xl font-bold text-white mb-2" style=""><br/></h3>
+<p class="text-slate-400 text-sm leading-relaxed" style="">Let this year be the start of a lifetime of happiness, knowing I'm yours and you are Mine<span class="animate-pulse-emoji">💞🫂</span>. I hope this year be a masterpiece of your own making, filled with laughter and big adventures.</p>
+</div>
+<div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/30 transition-colors hover-glow-card">
+<div class="text-2xl mb-3 flex items-center gap-1" style=""><span class="animate-pulse-emoji">💖🫂</span></div>
+<h3 class="text-xl font-bold text-white mb-2" style="">I am with you </h3>
+<p class="text-slate-400 text-sm leading-relaxed" style="">
+                                I'm here for your support. I want you to be happy always, my day doesn't truly start until I see you smile. You always grounded me🫠.
+                            </p>
+</div>
+</div>
+<div class="bg-gradient-to-r from-primary/20 to-transparent p-6 rounded-2xl border-l-4 border-primary">
+<p class="text-lg italic text-slate-200" style="">
+                            "I wish for your good health, and ofc study well, don't feel lonely i'm always here for you..."
+                        </p>
+</div>
+<div class="text-center pt-8">
+<p class="text-2xl sm:text-4xl font-black gold-accent tracking-widest uppercase mb-6 animate-shimmer" style="">HAPPY BIRTHDAY AMMU <span class="realistic-gold-glow">💛</span></p>
+<div class="flex justify-center gap-4">
+<div class="size-2 rounded-full bg-primary/40"></div>
+<div class="size-2 rounded-full bg-primary"></div>
+<div class="size-2 rounded-full bg-primary/40"></div>
+</div>
+</div>
+</div>
+</div>
+<footer class="text-center pb-12 opacity-50">
+<p class="text-xs uppercase tracking-[0.2em] font-medium text-slate-400" style="">Handcrafted with Love for Ammu</p>
+</footer>
+</main>
+<div class="fixed bottom-10 right-10 pointer-events-none opacity-20">
+<span class="material-symbols-outlined text-[120px] text-primary" style="">favorite</span>
+</div>
+<div class="fixed top-20 left-10 pointer-events-none opacity-10">
+<span class="material-symbols-outlined text-[80px] text-white" style="">flare</span>
+</div>
+</div>
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" id="particle-container"></div>
+<script>
+    const container = document.getElementById('particle-container');
+    const particleCount = 50;
+    const particles = [];
+
+    function createParticle() {
+        const particle = document.createElement('div');
+        const size = Math.random() * 3 + 1;
+        const x = Math.random() * 100;
+        const duration = Math.random() * 10 + 10;
+        const delay = Math.random() * -20;
+
+        particle.className = 'absolute bg-primary/40 rounded-full blur-[1px]';
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${x}%`;
+        particle.style.top = '-10px';
+        
+        container.appendChild(particle);
+
+        return {
+            element: particle,
+            y: -10,
+            speed: Math.random() * 1 + 0.5,
+            x: x
+        };
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+        const p = createParticle();
+        p.y = Math.random() * window.innerHeight;
+        particles.push(p);
+    }
+
+    let lastScrollY = window.scrollY;
+    let scrollVelocity = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        scrollVelocity = (currentScrollY - lastScrollY) * 0.1;
+        lastScrollY = currentScrollY;
+    });
+
+    function animate() {
+        particles.forEach(p => {
+            p.y += p.speed + scrollVelocity;
+            
+            if (p.y > window.innerHeight + 10) {
+                p.y = -10;
+            } else if (p.y < -20) {
+                p.y = window.innerHeight + 10;
+            }
+
+            p.element.style.transform = `translateY(${p.y}px)`;
+        });
+
+        scrollVelocity *= 0.95;
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+</script></body></html>
