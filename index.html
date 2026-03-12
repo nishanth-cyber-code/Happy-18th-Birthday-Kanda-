@@ -8,30 +8,52 @@
 <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Tiro+Kannada&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#ee2b5b",
-                        "background-light": "#f8f6f6",
-                        "background-dark": "#12080a",
-                    },
-                    fontFamily: {
-                        "display": ["Spline Sans", "sans-serif"],
-                        "kannada": ["Tiro Kannada", "serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.5rem",
-                        "lg": "1rem",
-                        "xl": "1.5rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
+<script id="tailwind-config">document.addEventListener('DOMContentLoaded', () => {
+        const target = document.getElementById('final-birthday-message');
+        const cakeSection = document.getElementById('cake-section');
+        const cake = document.getElementById('birthday-cake');
+        const flames = document.querySelector('.candle-flame');
+        const smoke = document.getElementById('smoke-puff');
+        const tooltip = document.getElementById('wish-tooltip');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                    
+                    // Reveal cake after text animation finishes
+                    setTimeout(() => {
+                        cakeSection.style.opacity = '1';
+                        cakeSection.style.transform = 'translateY(0)';
+                    }, 1200);
+                    
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        if (target) observer.observe(target);
+
+        cake.addEventListener('click', () => {
+            if (flames.style.display === 'none') return;
+            
+            // Blow out candles
+            flames.style.opacity = '0';
+            tooltip.style.opacity = '0';
+            
+            // Trigger smoke effect
+            smoke.setAttribute('r', '5');
+            smoke.classList.add('smoke-active');
+            
+            setTimeout(() => {
+                flames.style.display = 'none';
+                tooltip.innerHTML = 'Wish granted! ✨';
+                tooltip.style.opacity = '1';
+                tooltip.classList.remove('animate-bounce');
+            }, 700);
+        });
+    });</script>
 <style>
         .cosmic-bg {
             background: radial-gradient(circle at 50% 50%, #221015 0%, #12080a 100%);
@@ -164,7 +186,43 @@
         filter: blur(1px);
         box-shadow: 0 0 10px white;
     }
-</style></head>
+</style><style>
+    @keyframes flicker {
+        0%, 100% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.1) rotate(2deg); opacity: 1; }
+    }
+    .flame-glow {
+        animation: flicker 0.6s ease-in-out infinite;
+        transform-origin: center bottom;
+    }
+    @keyframes smoke-up {
+        0% { transform: translateY(0) scale(1); opacity: 0.6; }
+        100% { transform: translateY(-40px) scale(3); opacity: 0; }
+    }
+    .smoke-active {
+        animation: smoke-up 2s ease-out forwards;
+    }
+</style><style>
+    #immersion-scene {
+        transition: opacity 1.5s ease-in-out, transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .content-fade-away {
+        opacity: 0 !important;
+        transform: scale(0.9) translateY(-50px);
+        pointer-events: none;
+        transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    @keyframes pulse-heart {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(238, 43, 91, 0.6)); }
+        50% { transform: scale(1.15); filter: drop-shadow(0 0 40px rgba(238, 43, 91, 1)); }
+    }
+    .animate-pulse-heart {
+        animation: pulse-heart 2s ease-in-out infinite;
+    }
+    .smoke-puff-animation {
+        animation: smoke-up 2s ease-out forwards;
+    }
+</style><script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script></head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
 <div class="cosmic-bg min-h-screen flex flex-col items-center justify-center p-4 sm:p-8"><div class="absolute inset-0 overflow-hidden pointer-events-none">
 <span class="material-symbols-outlined absolute text-primary opacity-10 animate-float-slow" style="top: 15%; left: 10%; font-size: 40px;">favorite</span>
@@ -294,21 +352,157 @@
         requestAnimationFrame(animate);
     }
     animate();
-</script><script>
-    document.addEventListener('DOMContentLoaded', () => {
+</script><script>document.addEventListener('DOMContentLoaded', () => {
         const target = document.getElementById('final-birthday-message');
+        const cakeSection = document.getElementById('cake-section');
+        const cake = document.getElementById('birthday-cake');
+        const flames = document.querySelector('.candle-flame');
+        const smoke = document.getElementById('smoke-puff');
+        const tooltip = document.getElementById('wish-tooltip');
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0) scale(1)';
+                    
+                    // Reveal cake after text animation finishes
+                    setTimeout(() => {
+                        cakeSection.style.opacity = '1';
+                        cakeSection.style.transform = 'translateY(0)';
+                    }, 1200);
+                    
                     observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
 
-        if (target) {
-            observer.observe(target);
+        if (target) observer.observe(target);
+
+        cake.addEventListener('click', () => {
+            if (flames.style.display === 'none') return;
+            
+            // Blow out candles
+            flames.style.opacity = '0';
+            tooltip.style.opacity = '0';
+            
+            // Trigger smoke effect
+            smoke.setAttribute('r', '5');
+            smoke.classList.add('smoke-active');
+            
+            setTimeout(() => {
+                flames.style.display = 'none';
+                tooltip.innerHTML = 'Wish granted! ✨';
+                tooltip.style.opacity = '1';
+                tooltip.classList.remove('animate-bounce');
+            }, 700);
+        });
+    });</script><div class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background-dark opacity-0 pointer-events-none text-center p-6" id="immersion-scene">
+<div class="relative transition-all duration-1000" id="cake-container">
+<p class="text-white text-xl mb-8 font-medium animate-bounce">Click the candles to blow them out!</p>
+<div class="cursor-pointer hover:scale-105 transition-transform" id="immersive-cake">
+<svg class="drop-shadow-2xl" height="300" viewbox="0 0 200 200" width="300" xmlns="http://www.w3.org/2000/svg">
+<!-- Cake Base -->
+<rect fill="#3D2317" height="60" rx="10" width="140" x="30" y="120"></rect>
+<rect fill="#52362B" height="15" rx="2" width="140" x="30" y="120"></rect>
+<rect fill="#ee2b5b" height="8" opacity="0.7" width="120" x="40" y="140"></rect>
+<!-- Candle -->
+<rect fill="#FFB7B7" height="35" rx="2" width="16" x="92" y="85"></rect>
+<!-- Flames -->
+<g id="immersive-flames">
+<path class="flame-glow" d="M100 45 Q115 70 100 85 Q85 70 100 45" fill="#FFA500">
+<animate attributename="d" dur="0.6s" repeatcount="indefinite" values="M100 45 Q115 70 100 85 Q85 70 100 45; M100 40 Q125 70 100 85 Q75 70 100 40; M100 45 Q115 70 100 85 Q85 70 100 45"></animate>
+</path>
+<path d="M100 60 Q108 70 100 80 Q92 70 100 60" fill="#FFF700"></path>
+</g>
+<circle cx="100" cy="70" fill="white" id="immersive-smoke" opacity="0" r="0"></circle>
+</svg>
+</div>
+</div>
+<div class="hidden absolute inset-0 flex flex-col items-center justify-center p-6" id="final-reveal">
+<span class="material-symbols-outlined text-9xl text-primary animate-pulse-heart mb-8">favorite</span>
+<h2 class="text-3xl sm:text-5xl font-bold text-white mb-4">You are the light in my universe</h2>
+<p class="text-2xl sm:text-4xl gold-accent font-black animate-shimmer uppercase tracking-tighter">I love you, Ammu</p>
+</div>
+</div><script>
+    (function() {
+        let transitioned = false;
+        const immersionScene = document.getElementById('immersion-scene');
+        const mainContent = document.querySelector('main');
+        const immersiveCake = document.getElementById('immersive-cake');
+        const flames = document.getElementById('immersive-flames');
+        const smoke = document.getElementById('immersive-smoke');
+        const finalReveal = document.getElementById('final-reveal');
+        const cakeContainer = document.getElementById('cake-container');
+
+        window.addEventListener('scroll', () => {
+            if (transitioned) return;
+            
+            const scrollPosition = window.innerHeight + window.pageYOffset;
+            const pageHeight = document.documentElement.scrollHeight;
+            
+            // Trigger when reaching near bottom
+            if (scrollPosition >= pageHeight - 10) {
+                transitioned = true;
+                triggerTransition();
+            }
+        });
+
+        function triggerTransition() {
+            mainContent.classList.add('content-fade-away');
+            setTimeout(() => {
+                immersionScene.classList.remove('pointer-events-none');
+                immersionScene.style.opacity = '1';
+            }, 800);
         }
-    });
+
+        immersiveCake.addEventListener('click', () => {
+            if (flames.style.display === 'none') return;
+
+            // Blow out effect
+            flames.style.opacity = '0';
+            smoke.setAttribute('r', '10');
+            smoke.classList.add('smoke-puff-animation');
+            
+            setTimeout(() => {
+                flames.style.display = 'none';
+                
+                // Vibrant Confetti Explosion
+                const duration = 3 * 1000;
+                const end = Date.now() + duration;
+
+                (function frame() {
+                  confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ['#ee2b5b', '#ffb7b7', '#bf953f', '#ffffff']
+                  });
+                  confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ['#ee2b5b', '#ffb7b7', '#bf953f', '#ffffff']
+                  });
+
+                  if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                  }
+                }());
+
+                // Reveal Heart Message
+                setTimeout(() => {
+                    cakeContainer.style.opacity = '0';
+                    cakeContainer.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        cakeContainer.classList.add('hidden');
+                        finalReveal.classList.remove('hidden');
+                        finalReveal.classList.add('animate-in', 'fade-in', 'zoom-in');
+                    }, 1000);
+                }, 1000);
+            }, 500);
+        });
+    })();
 </script></body></html>
